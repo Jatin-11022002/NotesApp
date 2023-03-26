@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id=nav-left-header>
+            <a href="main.html"><h1>Magic Notes</h1></a>
+            <ul>
+                <li><a href="fav.html"><h3>Favourite</h3></a></li>
+                <li><a href="pin.html"><h3>Pinned</h3></a></li>
+            </ul>
+               
+        </div>
+        <div id="nav-right-header">
+            <div id="nav-search">
+                <input name="Search" id="navsearch-area" placeholder="Search..."></input>
+                <button id="search-btn">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <h1 class = "sub-heading">Add Your Notes Here</h1>
+    <div id="container">
+        <h2>Add a Note.</h2>
+        <input name="unique" id="unique" value="" type="hidden"></input>
+        <input name="unique" id="favbtn" value="" type="hidden"></input>
+        <input id="title" type="text" placeholder="Add Title">
+        <textarea name="note" id="textarea" cols="30" rows="10" placeholder="Add Your Note Here"></textarea>
+        <button id="addNoteBtn">Add</button>
+        <button id="saveNoteBtn" style="display: none;">Save</button>
+    </div>
+    <div  id="card-top"> 
+        <h1 class ="sub-heading">Available Notes</h1>
+    <select  id="dropdown" onchange="showNotes()">
+        <option value="all">All</option>
+      <option value="fav">Favourite</option>
+      <option value="pin">Pinned</option>  
+    </select>
+    </div>
+    
+    <div id="notes-card" class="notes-card">   
+    </div>
+    <script src="page.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</body>
+
+</html>
